@@ -1,0 +1,123 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 20px;
+}
+
+/* Main container */
+#main, #quiz-container, #result-container {
+    background: rgb(14, 3, 65);
+    color:white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 800px;  
+}
+
+/* Category grid */
+#categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+/* Each category card */
+.category {
+    position: relative;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+/* On hover */
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Make text readable over images */
+.category span {
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Quiz container question text */
+#question {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Options inside quiz */
+#options button {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#options button:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Timer style */
+#timer {
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+/* Next and restart buttons */
+#next-btn, #restart-btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#next-btn:hover, #restart-btn:hover {
+    background-color: #0056b3;
+}
